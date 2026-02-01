@@ -1,26 +1,23 @@
 public class ParkingSpot {
 
     private int spotNumber;
-    private boolean isFree;
+    private Vehicle vehicle;
 
-    public ParkingSpot(Vehicle vehicle, int spotNumber, boolean isFree) {
+    public ParkingSpot(Vehicle vehicle, int spotNumber) {
         this.spotNumber = spotNumber;
-        this.isFree = isFree;
-    }
-
-    public int getSpotNumber() {
-        return spotNumber;
-    }
-
-    public void setSpotNumber(int spotNumber) {
-        this.spotNumber = spotNumber;
+        this.vehicle = vehicle;
     }
 
     public boolean isFree() {
-        return isFree;
+        return vehicle == null;
     }
 
-    public void setFree(boolean free) {
-        isFree = free;
+    public void park(Vehicle vehicle){
+        this.vehicle = vehicle;
     }
+
+    public void unPark(){
+        this.vehicle = null;
+    }
+
 }
