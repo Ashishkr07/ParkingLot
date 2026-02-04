@@ -1,8 +1,11 @@
-public class Bike implements Vehicle{
+package ParkingLot;
+
+public class Car implements Vehicle{
+
     private VehicleType type;
     private double charge;
 
-    public Bike(VehicleType type, double charge) {
+    public Car(VehicleType type, double charge) {
         this.type = type;
         this.charge = charge;
     }
